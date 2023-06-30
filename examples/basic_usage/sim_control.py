@@ -7,9 +7,11 @@ import vista
 from vista.utils import transform
 from vista.entities.agents.Dynamics import tireangle2curvature
 
+trace_path = ["/mnt/c/Users/suzan/pacman/pacman-team/vista/vista/resources/vista_traces/20210726-184624_lexus_devens_center/"]
+# trace = os.path.join(trace_root, trace_path)
 
 def main(args):
-    world = vista.World(args.trace_path, trace_config={'road_width': 4})
+    world = vista.World(trace_path, trace_config={'road_width': 4})
     car = world.spawn_agent(
         config={
             'length': 5.,

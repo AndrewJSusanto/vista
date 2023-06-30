@@ -27,6 +27,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.10'
     ],
     description="Data-driven simulation for training and evaluating full-scale autonomous vehicles",
     long_description=readme,
