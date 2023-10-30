@@ -5,7 +5,8 @@
 	"build": { 
 		"context": "..",
 		"dockerfile": "Dockerfile"
-	}
+	},
+	"postCreateCommand": "conda create -n vista python=3.8 && conda env update --name vista --file ./env.yaml && pip install vista && python -c \"import vista\""
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},

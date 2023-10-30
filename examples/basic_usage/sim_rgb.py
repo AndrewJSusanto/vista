@@ -7,13 +7,13 @@ import vista
 
 from vista.utils import transform
 from vista.entities.agents.Dynamics import tireangle2curvature
+trace_path = ["/mnt/c/Users/Andrew/Documents/GitHub/vista/vista/resources/vista_traces/20210726-154641_lexus_devens_center"]
 
 pyglet.window.Window()
-def main(args):
-    trace_path = \
-        ["/mnt/c/Users/suzan/pacman/pacman-team/vista/vista/resources/vista_traces/20210726-154641_lexus_devens_center/"]
-    world = vista.World(trace_path, trace_config={'road_width': 4})
+def main(args): # removed args
+    world = vista.World(trace_path, trace_config={'road_width': 4}) # replaced args with trace_path
     car = world.spawn_agent(
+                            
         config={
             'length': 5.,
             'width': 2.,
@@ -58,4 +58,4 @@ if __name__ == '__main__':
                         help='Path to the traces to use for simulation')
     args = parser.parse_args()
 
-    main(args)
+    main(args) # replaced args with local variable trace_path
